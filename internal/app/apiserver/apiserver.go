@@ -1,6 +1,8 @@
 package apiserver
 
-import "github.com/sirupsen/logrus"
+import (
+	"github.com/sirupsen/logrus"
+)
 
 //APIserver
 type APIserver struct {
@@ -16,7 +18,12 @@ func New(config *Config) *APIserver {
 	}
 }
 
+// Start ...
 func (s *APIserver) Start() error {
+	if err := s.configLogger(); err != nil {
+		return err
+	}
+	s.logger.Info("starting api server")
 	return nil
 }
 

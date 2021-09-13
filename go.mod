@@ -3,7 +3,7 @@ module github.com/monkrus/rabbitaxi.git
 go 1.17
 
 require (
-	github.com/BurntSushi/toml v0.4.1 // indirect
+	github.com/BurntSushi/toml v0.4.1
 	github.com/sirupsen/logrus v1.8.1
 )
 
